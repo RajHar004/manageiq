@@ -21,7 +21,7 @@ manageiq_plugin "manageiq-schema"
 
 # Unmodified gems
 gem "activerecord-session_store",       "~>2.0"
-gem "activerecord-virtual_attributes",  "~>7.1.2"
+gem "activerecord-virtual_attributes",  "~>7.2.0.1"
 gem "acts_as_tree",                     "~>2.7" # acts_as_tree needs to be required so that it loads before ancestry
 gem "ancestry",                         "~>4.1.0",           :require => false
 gem "awesome_spawn",                    "~>1.6",             :require => false
@@ -50,7 +50,7 @@ gem "linux_admin",                      ">=3.0", "<5",       :require => false
 gem "listen",                           "~>3.2",             :require => false
 gem "manageiq-api-client",              "~>0.6.0",           :require => false
 gem "manageiq-loggers",                 "~>1.2", ">= 1.2.1", :require => false
-gem "manageiq-messaging",               "~>1.5",             :require => false
+gem "manageiq-messaging",               "~>2.0",             :require => false
 gem "manageiq-password",                "~>1.0",             :require => false
 gem "manageiq-postgres_ha_admin",       "~>3.4",             :require => false
 gem "manageiq-ssh-util",                "~>0.2.0",           :require => false
@@ -69,7 +69,7 @@ gem "psych",                            ">=3.1",             :require => false #
 gem "query_relation",                   "~>0.1.0",           :require => false
 gem "rack",                             ">=2.2.14",          :require => false
 gem "rack-attack",                      "~>6.5.0",           :require => false
-gem "rails",                            "~>7.1.5", ">=7.1.5.1"
+gem "rails",                            "~>7.2.0", ">= 7.2.2.1"
 gem "rails-i18n",                       "~>7.x"
 gem "rake",                             ">=12.3.3",          :require => false
 gem "rest-client",                      "~>2.1.0",           :require => false
@@ -90,6 +90,7 @@ gem "cgi",  "~> 0.4.2"  # CVE-2025-27219: https://github.com/advisories/GHSA-gh9
 gem "time", "~> 0.2.2"  # CVE-2023-28756: https://github.com/advisories/GHSA-fg7x-g82r-94qc; ruby 3.1.4+
 gem "uri",  "~> 0.13.2" # CVE-2025-27221: https://github.com/advisories/GHSA-22h5-pq3x-2gf2
                         # Avoid URI 1.0.0 for now due to: https://github.com/ruby/uri/issues/125
+gem "thor", ">= 1.4.0"   # CVE-2025-54314: https://github.com/advisories/GHSA-mqcp-p2hv-vw6x
 
 # Custom gem that replaces mime-types in order to redirect mime-types calls to mini_mime
 #   Source is located at https://github.com/ManageIQ/mime-types-redirector
